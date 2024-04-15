@@ -1,15 +1,11 @@
-# -*- coding: utf-8 -*-
-"""
+- - -
+l a y o u t : p o s t
+t i t l e : Test
+i m a g e : " / p o s t s / c o f f e e _ p y t h o n . j p g "
+t a g s : [ P y t h o n , C o f f e e ]
+- - -
+Casual Impact Analysis
 
-@author: mmila
-
-Task: Understand and measure the effect of the delivery membership campaign
-overall know what the sales are for the membership
-"""
-
-###############################################################################
-# Casual Impact Analysis
-###############################################################################
 
 # Import required packages
 from causalimpact import CausalImpact
