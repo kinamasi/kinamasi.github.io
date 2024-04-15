@@ -8,14 +8,12 @@ tags:[Pyhton,Coffee]
 ---
 
 
+
+# Casual Impact Analysis
 """ 
 Task: Understand and measure the effect of the delivery membership campaign
 overall know what the sales are for the membership
 """
-
-###############################################################################
-# Casual Impact Analysis
-###############################################################################
 
 # Import required packages
 from causalimpact import CausalImpact
