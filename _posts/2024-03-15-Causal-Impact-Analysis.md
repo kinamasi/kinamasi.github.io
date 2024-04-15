@@ -1,10 +1,8 @@
 ---
-
 layout:post
 title: Causal Impact Analysis
 image:"/posts/coffee_python.jpg"
 tags:[Pyhton,Coffee]
-
 ---
 
 
