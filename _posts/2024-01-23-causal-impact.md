@@ -157,9 +157,9 @@ customer_daily_sales = transactions.groupby(["customer_id", "transaction_date"])
 customer_daily_sales = pd.merge(customer_daily_sales, campaign_data, how = "inner", on = "customer_id")
 
 # pivot the data to aggregate daily sales by signup group
-"""since the data is at customer and date level, for causal impact, need the data to be at 
+"""since the data is at customer and date level, for causal impact, the data needs to be at 
 date level (sales over time) and the mean sales per customer for each of the signed up and
-did not groups into columns
+those who did not groups into columns
 """
 causal_impact_df = customer_daily_sales.pivot_table(index = "transaction_date",
                                                     columns = "signup_flag",
@@ -204,6 +204,11 @@ The difference between this counterfactual and the actual data in the post-perio
 
 ```python
 
+"""
+Specify the start and end dates of the pre and post period (6 months data) The membership 
+went live on the 1st of July. Pre period will run from the 1st of April and 30th June.
+Post period will run from the 1st of July to Sept 30th
+"""
 # specify the pre & post periods
 pre_period = ["2020-04-01","2020-06-30"]
 post_period = ["2020-07-01","2020-09-30"]
