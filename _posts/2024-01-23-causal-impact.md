@@ -147,8 +147,8 @@ from causalimpact import CausalImpact
 import pandas as pd
 
 # import data tables
-transactions = ...
-campaign_data = ...
+transactions = pd.read_excel("data/grocery_database.xlsx",sheet_name= "transactions")
+campaign_data = pd.read_excel("data/grocery_database.xlsx",sheet_name= "campaign_data")
 
 # aggregate transaction data to customer, date level
 customer_daily_sales = transactions.groupby(["customer_id", "transaction_date"])["sales_cost"].sum().reset_index()
@@ -157,6 +157,10 @@ customer_daily_sales = transactions.groupby(["customer_id", "transaction_date"])
 customer_daily_sales = pd.merge(customer_daily_sales, campaign_data, how = "inner", on = "customer_id")
 
 # pivot the data to aggregate daily sales by signup group
+"""since the data is at customer and date level, for causal impact, need the data to be at 
+date level (sales over time) and the mean sales per customer for each of the signed up and
+did not groups into columns
+"""
 causal_impact_df = customer_daily_sales.pivot_table(index = "transaction_date",
                                                     columns = "signup_flag",
                                                     values = "sales_cost",
