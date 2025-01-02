@@ -27,7 +27,7 @@ ___
 
 ### Context <a name="overview-context"></a>
 
-Our client is looking to re-jig the alcohol section within their store.  Customers are often complaining that they can't find the products they want, and are also wanting recommendations about which other products to try.  On top of this, their marketing team would like to start running "bundled" promotions as this has worked well in other areas of the store - but need guidance with selecting which products to put together.
+Our client is looking to re-organize the alcohol section within their store.  Customers are often complaining that they can't find the products they want, and are also wanting recommendations about which other products to try. Additionally, their marketing team would like to start running "bundled" promotions as this has worked well in other areas of the store - but need guidance with selecting which products to put together.
 
 They have provided us a sample of 3,500 alcohol transactions - our task is fairly open - to see if we can find solutions or insights that might help the business address the aforementioned problems!
 
@@ -35,7 +35,7 @@ They have provided us a sample of 3,500 alcohol transactions - our task is fairl
 <br>
 ### Actions <a name="overview-actions"></a>
 
-Based upon the tasks at hand - we apply Association Rule Learning, specifically *Apriori* to examine & analyse the strength of relationship between different products within the transactional data.
+Based upon the tasks at hand - we apply Association Rule Learning, specifically *Apriori* to examine & analyze the strength of relationship between different products within the transactional data.
 
 We firstly installed the apyori package, which contains all of the required functionality for this task.
 
@@ -65,7 +65,7 @@ We propose to also build a "search engine" for category managers where they can 
 
 As an example - we search for any products that associate strongly with "New Zealand" products. There appeared to be *some* relationship between New Zealand wines and other New Zealand wines, but what was also interesting was that New Zealand wines seemed to be more associated with French & South American wines than they were with Australian Wines.
 
-New Zealand & Australia are often grouped together, but in terms of wine this wouldn't make sense - perhaps because of the difference climates the wines are very different and thus it wouldn't make sense to group wines by geographical proximity, but by preference instead.  This is only a hypothesis for now - we will need to take this back to the client and get their category experts to help us interpret it!
+New Zealand & Australia are often grouped together, but in terms of wine this wouldn't make sense - perhaps because of the different climates, the wines are very different and thus it wouldn't make sense to group wines by geographical proximity, but by preference instead.  This is only a hypothesis for now - we will need to take this back to the client and get their category experts to help us interpret it!
 
 <br>
 <br>
